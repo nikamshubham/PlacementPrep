@@ -10,7 +10,7 @@ public class Palindrom {
 		Scanner sc = new Scanner(System.in);
 		a = sc.next();
 		System.out.println(a.length());	
-		//Reverse string logic
+		//Reverse string logic//
 		for (int i = (a.length()-1); i >= 0; i--) {
 			b = b+a.charAt(i);
 		}
