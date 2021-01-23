@@ -12,7 +12,5 @@ public class ReverseNo {
 			n = n/10;			
 		}
 		System.out.println(rev);
-
 	}
-
 }
