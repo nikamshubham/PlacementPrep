@@ -12,7 +12,7 @@ public class LargestNoQ10 {
 		c = sc.nextInt();
 		
 		int ans = c> (a>b ? a: b)?c:((a>b)?a:b);
-		
+		//by ternnary operator
 		System.out.println(ans);
 		
 	}
