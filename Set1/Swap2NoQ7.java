@@ -15,7 +15,7 @@ public class Swap2NoQ7 {
 		System.out.println("a = "+a);
 		System.out.println("b = "+b);
 		
-		//without using 3rd variable
+		///without using 3rd variable
 		a=a+b;
 		b=a-b;
 		a=a-b;
