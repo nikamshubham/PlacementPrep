@@ -13,7 +13,7 @@ public class PositiveNegativeQ2 {
 			System.out.println(no +" is positive");
 		else
 			System.out.println(no+" is negative");
-		
+		//
 		
 	}
 
