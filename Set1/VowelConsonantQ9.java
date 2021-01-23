@@ -9,7 +9,7 @@ public class VowelConsonantQ9 {
 		System.out.println("Enter a character");
 		Scanner sc = new Scanner(System.in);
 		ch = sc.next().charAt(0);
-//		System.out.println(ch);
+//		System.out.println(ch);//
 		switch (ch) {
 		case 'a':
 		case 'e':
