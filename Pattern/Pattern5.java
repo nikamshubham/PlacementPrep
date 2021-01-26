@@ -1,7 +1,13 @@
 package Pattern;
 
 public class Pattern5 {
-
+/*
+1
+121
+12321
+1234321
+123454321
+*/
 	public static void main(String[] args) {
 		for(int i=1;i<=5;i++) {
 			int temp=1;
