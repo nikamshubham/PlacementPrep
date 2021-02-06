@@ -1,7 +1,24 @@
 package SortingAlgo;
 
 public class InsertionSort {
-
+/*
+ * Insertion Sort
+ * --------------
+ * Insertion sort is the sorting mechanism where 
+ * the sorted array is built having one item at a time. 
+ * The array elements are compared with each 
+ * other sequentially and then arranged simultaneously 
+ * in some particular order.
+ * 
+ * It is much less efficient on large lists than 
+ * more advanced algorithms such as quicksort, heapsort, 
+ * or merge sort.
+ * 
+ * Time Complexity
+ * ---------------
+ * Worst Case : O(n^2)
+ * Best Case : O(n)
+ */
 	public static void main(String[] args) {
 		int[] a = {8,5,7,3,2,1};
 		
