@@ -1,7 +1,14 @@
 package SortingAlgo;
 
 public class CountSort {
-
+/*
+n for original array and r for new array 
+Worst complexity: n+r
+Average complexity: n+r
+Space complexity: n+r
+Stable: Yes
+Class: Non-comparison sort
+*/
 	public static void main(String[] args) {
 		int[] arr = {6,3,9,10,15,6,8,12,3,6};
 		int max = arr[0];
