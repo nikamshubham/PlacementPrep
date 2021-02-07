@@ -12,48 +12,59 @@ Average complexity: n*log(n)
 Best complexity: n*log(n)
 Method: Partitioning
 Stable: No
+In the implementation below, the following components have been used: Here,
+
+A[]  = array whose elements are to be sorted
+
+start: Leftmost position of the array
+
+end: Rightmost position of the array
+
+i : Boundary between the elements that are less than pivot and those greater than pivot
+
+j : Boundary between the partitioned and unpartitioned part of array
+
+piv : Pivot element
 */
 	public static void main(String[] args) {
-		int A[]={11,13,7,12,16,9,24,5,10,3},n=10,i;
+		int A[]={11,13,7,12,16,9},n=6,i;
 		
-		Sort(A,0,9);
+		quick_sort(A,0,n-1);
 		
 		System.out.print("the sorted array is = ");
 		for(int a:A) {
 			System.out.print(a+" ");
 		}
-
 	}
 	
-	public static void Sort(int arr[], int begin, int end) {
-	    if (begin < end) {
-	        int partitionIndex = partition(arr, begin, end);
-
-	        Sort(arr, begin, partitionIndex-1);
-	        Sort(arr, partitionIndex+1, end);
-	    }
-	}
+	static void quick_sort ( int A[ ] ,int start , int end ) {
+		   if( start < end ) {
+		        //stores the position of pivot element
+		         int piv_pos = partition (A,start , end ) ;     
+		         quick_sort (A,start , piv_pos -1);    //sorts the left side of pivot.
+		         quick_sort ( A,piv_pos +1 , end) ; //sorts the right side of pivot.
+		   }
+		}
 	
-	public static int partition(int arr[], int begin, int end) {
-	    int pivot = arr[end];
-	    int i = (begin-1);
+	static int partition ( int A[],int start ,int end) {
+	    int i = start + 1,temp;
+	    int piv = A[start] ;            //make the first element as pivot element.
+	    for(int j =start + 1; j <= end ; j++ )  {
+	    /*rearrange the array by putting elements which are less than pivot
+	       on one side and which are greater that on other. */
 
-	    for (int j = begin; j < end; j++) {
-	        if (arr[j] <= pivot) {
-	            i++;
-
-	            int swapTemp = arr[i];
-	            arr[i] = arr[j];
-	            arr[j] = swapTemp;
+	          if ( A[ j ] < piv) {
+	        	  temp = A[i];
+	        	  A[i] = A[j];
+	        	  A[j] = temp;
+//	        	  swap (A[ i ],A [ j ]);
+	            i += 1;
 	        }
-	    }
-
-	    int swapTemp = arr[i+1];
-	    arr[i+1] = arr[end];
-	    arr[end] = swapTemp;
-
-	    return i+1;
+	   }
+	  temp = A[start];
+  	  A[start] = A[i-1];
+  	  A[i-1] = temp;
+//	   swap ( A[ start ] ,A[ i-1 ] ) ;  //put the pivot element in its proper place.
+	   return i-1;                      //return the position of the pivot
 	}
-
-
 }
