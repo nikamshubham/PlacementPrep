@@ -8,7 +8,7 @@ public class MatrixAddition {
  * matrices should have same dimensions, that is
  * both matrix should have same number of rows
  * and same number of columns. 
- * */
+ */
 	public static void main(String[] args) {
 		int[][] A = {{11,12,13,14},
 					{15,16,17,18},
