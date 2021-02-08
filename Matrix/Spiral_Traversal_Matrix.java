@@ -32,7 +32,7 @@ public class Spiral_Traversal_Matrix {
 			for(int i=columns-1;i>=curCol;i--)
 				System.out.print(matrix[rows-1][i]+" ");
 			rows--;
-			
+			//
 			//print first column
 			for(int i=rows-1;i>=curRow;i--)
 				System.out.print(matrix[i][curCol]+" ");
