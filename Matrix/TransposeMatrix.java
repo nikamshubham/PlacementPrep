@@ -11,7 +11,7 @@ public class TransposeMatrix {
 	 *  Say Matrix A is 
 	 *  1 2 3
 	 *  4 5 6
-	 *  
+	 
 	 *  Transpose of matrix A is AT 
 	 *  1 4
 	 *  2 5
