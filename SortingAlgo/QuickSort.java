@@ -6,6 +6,15 @@ Quick sort is a highly efficient sorting algorithm and is based on partitioning 
 A large array is partitioned into two arrays one of which holds values smaller than the specified value, say pivot, 
 based on which the partition is made and another array holds values greater than the pivot value.
 Quicksort partitions an array and then calls itself recursively twice to sort the two resulting subarrays. 
+Steps to implement Quick sort algorithm in place:
+
+1) Choose an element, called pivot, from the list or array.
+2) Reorder the list so that all elements with values less than the pivot come before the pivot, and all elements with
+values greater than the pivot come after it (equal values can go either way). This is also known as partitioning.
+After partitioning the pivot is in its final position.
+3) Recursively apply the above steps to the sub-list of elements with smaller values and separately the sub-list of elements with greater values.
+If the array contains only one element or zero elements then the array is sorted.
+
 
 Worst complexity: n^2
 Average complexity: n*log(n)
